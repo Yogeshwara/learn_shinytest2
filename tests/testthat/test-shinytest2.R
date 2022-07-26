@@ -29,3 +29,14 @@ library(shinytest2)
 #   app$expect_values()
 #   app$expect_values(output = "tble")
 # })
+
+
+test_that("{shinytest2} recording: learn_shinytest2", {
+  app <- AppDriver$new(name = "learn_shinytest2", height = 927, width = 609)
+  app$set_inputs(api = "ke")
+  app$set_inputs(api = "key")
+  app$set_inputs(api = "keytru")
+  app$set_inputs(api = "keytruda")
+  app$expect_values()
+  app$click("submit")
+})
